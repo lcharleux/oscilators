@@ -2,3 +2,7 @@ makedoc/
 *~
 *.pyc
 doc/_build/*
+*.aux
+*.log
+*.out
+*.synctex.gz
