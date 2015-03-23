@@ -159,6 +159,22 @@ Le problème se ramène alors à résoudre:
 
 \subsection{Régime établie avec excitation sinusoïdale}
 
+\begin{figure}
+\begin{center}
+\includegraphics[width = 1.\textwidth]{../oscillators/example_code/linear_oscillator_signal.pdf}
+\end{center}
+\caption{Simulation du régime transitoire et de la convergence vers le régime établi dans le cas d'un oscillateur linéaire amorti (\href{https://github.com/lcharleux/oscillators/blob/master/oscillators/example_code/linear_oscillator_demo.py}{code}).}
+\label{fig:linear_oscillator_power}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width = 1.\textwidth]{../oscillators/example_code/linear_oscillator_power.pdf}
+\end{center}
+\caption{Power harvesting capability of the linear oscillator: confrontation of numerical simulations with the theory (\href{https://github.com/lcharleux/oscillators/blob/master/oscillators/example_code/linear_oscillator_power.py}{code}).}
+\label{fig:linear_oscillator_power}
+\end{figure}
+
 On suppose que :
 $$
 x_d(t) = A_d \sin(\omega_d t)
@@ -198,5 +214,7 @@ Les performances du système pour une accélération d'excitation constante alor
 \begin{equation}
 \dfrac{\bar p_a}{C_d^2} = \dfrac{ a \omega_d^2}{2\left(a^2\omega_d^2 + \left( \omega_0^2 - \omega_d^2\right)^2 \right) } 
 \end{equation}
+
+La figure \ref{fig:linear_oscillator_power} montre que les résultats des simulations numériques sont en excellent accord avec la théorie.
 
 \end{document}

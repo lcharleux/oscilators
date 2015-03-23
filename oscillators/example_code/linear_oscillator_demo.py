@@ -5,14 +5,14 @@ from oscillators.oscillators import Oscillator
 
 # Inputs 
 
-a = .01 # damping / mass
+a = .1 # damping / mass
 omega0 =  1. # resonance pulsation
-omegad = 1. # drive pulsation
+omegad = 3. # drive pulsation
 def ep(x): return .5 * omega0**2 * x**2
 def ddotxd(t):  return np.sin(omegad * t)
 #def ddotxd(t):  return 0.*t
 Td = 2. * np.pi / omegad
-time    = np.linspace(0. ,200. * Td, 4096)
+time    = np.linspace(0., 50. * Td, 4096)
 
 o = Oscillator(
   a = a,
@@ -28,7 +28,7 @@ fig = plt.figure(0)
 plt.clf()
 
 fig.add_subplot(3,1,1)
-plt.title("Linear oscillator: $={0}$")
+plt.title("Linear oscillator: $\omega_d/\omega_0={0}$, $a = {1}$".format(omegad / omega0, a))
 plt.plot(time, o.x, "b-", linewidth = 1.5)
 #plt.xlabel("Time, $t$")
 plt.ylabel("Position, $x$")
@@ -40,7 +40,7 @@ plt.ylabel("Speed, $\dot x$")
 plt.grid()
 fig.add_subplot(3,1,3)
 plt.plot(time, o.ddotx, "b-", linewidth = 1.5, label = "$\ddot x$")
-#plt.plot(time, o.ddotxd(time), "r-", linewidth = 1.5, label = "$\ddot x_0$")
+plt.plot(time, o.ddotxd(time), "r-", linewidth = 1.5, label = "$\ddot x_0$")
 plt.xlabel("Time, $t$")
 plt.ylabel("Acceleration")
 plt.grid()
