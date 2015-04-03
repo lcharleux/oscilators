@@ -130,8 +130,23 @@ $$
 Cette formulation est nécessaire car utilisée par les solveurs dédiés aux équations différentielles.
 
 \section{Performance énergétique du système}
- 
-\noindent  L'énergie massique $e$ de l'oscillateur à un instant donné est la somme de l'énergie potentielle massique $e_p$ et de l'énergie cinétique massique $e_p = \frac{1}{2} \dot{x}^2$. Dans ce qui suite on s'intéresse à un régime établi au sens énergétique, c'est-à-dire:
+
+\subsection{Bilan énergétique}
+
+Les différentes énergies massiques mises en jeu sont les suivantes:
+\begin{itemize}
+\item L'énergie cinétique $e_c = \frac{1}{2}(\dot x + \dot x_d)^2$.
+\item L'énergie potentielle $e_p (x)$.
+\item L'énergie mécanique de l'oscillateur $e = e_c + e_p$
+\end{itemize}
+
+Les puissances utilisées dans la suite:
+
+\begin{itemize}
+\item Puissance extraite de l'oscillateur au travers de l'amortissement $p_a = a \dot x^2$
+\end{itemize}
+
+Dans ce qui suite on s'intéresse à un régime établi au sens énergétique, c'est-à-dire:
 
 \begin{equation}
 \frac{de}{dt} = 0
@@ -203,13 +218,13 @@ La puissance massique moyenne en régime établi est donc:
 \bar p_a = \frac{a\omega_d^2 A^2}{2} =   \dfrac{ a A_d^2 \omega_d^6}{2\left(a^2\omega_d^2 + \left( \omega_0^2 - \omega_d^2\right)^2 \right) } 
 \end{equation}
 
-On va s'intéresser au cas où l'accélération $\ddot{x}_d$ est une constante, on pose donc $A_d = C_d / \omega_d^2$, on a alors:
+On va s'intéresser au cas où l'accélération $\ddot{x}_d$ est d'amplitude constante $C_d$ en fonction de $\omega_d$, on a alors donc $A_d = C_d / \omega_d^2$, on a alors:
 
 \begin{equation}
 \bar p_a = \dfrac{ a C_d^2 \omega_d^2}{2\left(a^2\omega_d^2 + \left( \omega_0^2 - \omega_d^2\right)^2 \right) } 
 \end{equation}
 
-Les performances du système pour une accélération d'excitation constante alors données par:
+Les performances du système pour une accélération d'excitation d'amplitude constante alors données par:
 
 \begin{equation}
 \dfrac{\bar p_a}{C_d^2} = \dfrac{ a \omega_d^2}{2\left(a^2\omega_d^2 + \left( \omega_0^2 - \omega_d^2\right)^2 \right) } 
